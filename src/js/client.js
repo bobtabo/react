@@ -14,17 +14,9 @@ export default class UserList extends Component {
 
     componentDidMount() {
       axios
-          // .get('http://laravel5.local/api/users')
-          // .then(response => {
-          //     this.setState({datas: response.data});
-          // })
           .get('http://laravel5.local/api/users')
           .then(response => {
-            const data = response.data;
-            console.log(data);
-            this.setState({
-              datas: [...data]
-            });
+              this.setState({datas: response.data});
           })
           .catch(() => {
               console.log('通信に失敗しました');
@@ -34,10 +26,9 @@ export default class UserList extends Component {
     renderDatas() {
       return this.state.datas.map(data => {
           return (
-              // <li>
-              //   {data.id} / {data.name} / {data.emai} / {data.password}
-              // </li>
-              <li key={data.id}>{data.name}</li>
+              <li key={data.id}>
+                {data.id} / {data.name} / {data.email} / {data.password}
+              </li>
           );
       });
     }
