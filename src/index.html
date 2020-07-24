@@ -3,12 +3,86 @@
   <head>
     <meta charset="utf-8">
     <title>React Tutorials</title>
-    <!-- change this up! http://www.bootstrapcdn.com/bootswatch/ -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap">
+    <link rel="stylesheet" href="https://getbootstrap.jp/docs/4.5/examples/album/album.css">
+    <link rel="stylesheet" href="https://getbootstrap.jp/docs/4.5/examples/example.css">
   </head>
 
   <body>
-    <div id="content"> </div>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">おわたた！</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">あべし</a></li>
+                <li><a href="#" class="text-white">ひでぶ</a></li>
+                <li><a href="#" class="text-white">たわば</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <!-- <strong>Album</strong> -->
+            <strong>React</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Laravel APIのレスポンス</h1>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <table class="table table-bordered table-hover">
+              <caption><a rel="noopener" href="http://laravel5.local/api/users" target="_blank">http://laravel5.local/api/users</a></caption>
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">名前</th>
+                  <th scope="col">メールアドレス</th>
+                  <th scope="col">パスワード</th>
+                </tr>
+              </thead>
+              <tbody id="content">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">トップに戻る</a>
+        </p>
+        <p>Bootstrap は初めてですか？ <a rel="noopener" href="https://getbootstrap.jp/" target="_blank">Bootstrap ホームページにアクセスする</a>か<a rel="noopener" href="https://getbootstrap.jp/docs/4.5/getting-started/introduction/" target="_blank">スタートガイド</a>を読みましょう。</p>
+      </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
     <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.11.2/react.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.11.2/JSXTransformer.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>

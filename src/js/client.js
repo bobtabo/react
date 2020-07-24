@@ -22,24 +22,17 @@ export default class UserList extends Component {
       });
   }
 
-  renderDatas() {
-    return this.state.datas.map(data => {
-        return (
-            <li key={data.id}>
-              {data.id} / {data.name} / {data.email} / {data.password}
-            </li>
-        );
-    });
-  }
-
   render() {
-    return (
-        <div className="container">
-            <ul>
-                {this.renderDatas()}
-            </ul>
-        </div>
-    );
+    return this.state.datas.map(data => {
+      return (
+        <tr key={data.id}>
+          <th scope="row">{data.id}</th>
+          <td>{data.name}</td>
+          <td>{data.email}</td>
+          <td>{data.password}</td>
+        </tr>
+      );
+    });
   }
 }
 
